@@ -15,8 +15,70 @@ driver = webdriver.Chrome(service=service)
 driver.get("https://shrinkagemanagementuat.tops.co.th/")
 time.sleep(6)  
 
+# ----------  (test ค่าว่าง 04) ----------
 username_input = driver.find_element(By.CSS_SELECTOR, 'textarea[data-semantics-role="text-field"]')
-username_input.send_keys("anlaksana@central.co.th")
+username_input.clear()
+username_input.send_keys("")
+
+password_input = driver.find_element(By.CSS_SELECTOR, "input[aria-label='กรุณากรอกรหัสผ่าน']")
+password_input.clear()
+password_input.send_keys("")
+
+login_button = driver.find_element(By.XPATH, "//*[contains(text(), 'เข้าสู่ระบบ')]")
+login_button.click()
+time.sleep(6)
+
+driver.get("https://shrinkagemanagementuat.tops.co.th/")
+time.sleep(6)  
+
+# ----------  (test ค่าว่าง 06) ----------
+username_input = driver.find_element(By.CSS_SELECTOR, 'textarea[data-semantics-role="text-field"]')
+username_input.clear()
+username_input.send_keys("")
+
+password_input = driver.find_element(By.CSS_SELECTOR, "input[aria-label='กรุณากรอกรหัสผ่าน']")
+password_input.clear()
+password_input.send_keys("Password2025")
+
+login_button = driver.find_element(By.XPATH, "//*[contains(text(), 'เข้าสู่ระบบ')]")
+login_button.click()
+time.sleep(6)
+driver.get("https://shrinkagemanagementuat.tops.co.th/")
+time.sleep(6)  
+
+# ----------  (test ค่าว่าง 05) ----------
+username_input = driver.find_element(By.CSS_SELECTOR, 'textarea[data-semantics-role="text-field"]')
+username_input.clear()
+username_input.send_keys("takittithat@central.co.th")
+
+password_input = driver.find_element(By.CSS_SELECTOR, "input[aria-label='กรุณากรอกรหัสผ่าน']")
+password_input.clear()
+password_input.send_keys("")
+
+login_button = driver.find_element(By.XPATH, "//*[contains(text(), 'เข้าสู่ระบบ')]")
+login_button.click()
+time.sleep(6)
+
+
+driver.get("https://shrinkagemanagementuat.tops.co.th/")
+time.sleep(6)  
+
+# ----------  (07) ----------
+username_input = driver.find_element(By.CSS_SELECTOR, 'textarea[data-semantics-role="text-field"]')
+
+username_input.send_keys("999")
+password_input = driver.find_element(By.CSS_SELECTOR, "input[aria-label='กรุณากรอกรหัสผ่าน']")
+
+password_input.send_keys("Password2025")
+login_button = driver.find_element(By.XPATH, "//*[contains(text(), 'เข้าสู่ระบบ')]")
+login_button.click()
+time.sleep(6)
+
+driver.get("https://shrinkagemanagementuat.tops.co.th/")
+time.sleep(6)  
+
+username_input = driver.find_element(By.CSS_SELECTOR, 'textarea[data-semantics-role="text-field"]')
+username_input.send_keys("takittithat@central.co.th")
 password_input = driver.find_element(By.CSS_SELECTOR, "input[aria-label='กรุณากรอกรหัสผ่าน']")
 password_input.send_keys("Password2025")
 time.sleep(6) 
@@ -26,5 +88,10 @@ login_button.click()
 time.sleep(6)  
 
 
-driver.quit()
+
+
+
+
+
+
 
