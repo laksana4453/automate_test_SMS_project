@@ -53,7 +53,7 @@ def select_store(code: str, timeout: int = 20) -> bool:
         # คลิกสาขา
         driver.execute_script("arguments[0].click();", store_item)
         time.sleep(3)  
-        print(f"เลือกสาขา {code} สำเร็จ")
+        print(f"เลือกสาขา {code} สำเร็จ ✅")
 
         return True
     
